@@ -1,0 +1,93 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Login.master.cs" Inherits="Master_Login" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <%--<link rel="Stylesheet" type="text/css" href="../Styles/import_Login.css" />--%>
+    <title>Login | Football Predictor</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    
+    </asp:ContentPlaceHolder>
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript">
+        $('div.loginPanel').each(function () {
+            var $obj = $(this); $(window).scroll(function () {
+                var yPos = -($(window).scrollTop() / $obj.data('speed'));
+                var bgpos =  '60%' + yPos + 'px';
+                $obj.css('background-position', bgpos);
+            });
+        }); 
+    </script>
+<style type="text/css">
+* {margin:0; padding: 0;}
+html, body   
+{
+    /*background: #2D3130;*/
+    /*font-size: .80em;*/
+    /*width:auto;
+    font-family: Lato, "Lato Hairline", Arial, Helvetica, Verdana, sans-serif;
+    margin: auto;
+    padding: 0px;*/
+    
+    height:100%;
+    font-family: Lato, "Lato Hairline", Arial, Helvetica, Verdana, sans-serif;
+}
+
+form 
+{
+    height:100%;
+    background-color: White;
+    z-index: 30;
+}
+
+.loginPanel
+{
+    color:#FFF; 
+    /*margin: 0 auto; */
+    display: block;
+    width: 100%; 
+    max-width: 1920px; 
+    position: relative; 
+    min-height: 100%;
+    text-shadow: 0 0 10px rgba(0,0,0,0.7); 
+    
+    background-position: 20% 0; 
+    background-repeat: repeat; 
+    background-attachment: fixed;
+
+
+}
+.loginPanel article { width: 70%; text-align: center; margin:0 auto; padding:20% 0 0; }
+.loginPanel { text-align: center; margin:auto; padding:0 auto; }
+
+
+
+#login
+{
+    background-image: url(Images/Football/Login_sample2.jpg);
+}
+#signup
+{
+    opacity: 0.9;
+    background-image: url(Images/Football/Login_sample3.jpg);
+    -webkit-box-shadow:-20px 0 20px 5px rgba(0,0,0,0.7); 
+    -moz-box-shadow:-20px 0 20px 5px rgba(0,0,0,0.7); 
+    -ms-box-shadow:-20px 0 20px 5px rgba(0,0,0,0.7); 
+    -o-box-shadow:-20px 0 20px 5px rgba(0,0,0,0.7); 
+    box-shadow:-20px 0 20px 5px rgba(0,0,0,0.7);
+
+}
+</style>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+    <%--<div class="loginPage">--%>
+        <asp:ContentPlaceHolder id="Body" runat="server">
+        </asp:ContentPlaceHolder>
+    <%--</div>--%>
+    </form>
+</body>
+</html>

@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Root.master.cs" Inherits="Master_Root" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link rel="Stylesheet" type="text/css" href="../Styles/Site.css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="paintArea">
+    <center>
+        <div id="leftSmallBox">
+            <asp:ContentPlaceHolder ID="ContenPlaceHolderSmall" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div id="rightBigBox">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+            
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="footer">
+	        <div class="split">&#169; Ipsos MORI. All rights reserved.</div> 
+            <div class="split right">Powered by <a href="https://www.ipsos-mori.com/" target="_blank">Data Delivery</a></div> 
+	    </div>
+    </center>
+    </div>
+    </form>
+</body>
+</html>
